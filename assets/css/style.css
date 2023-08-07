@@ -244,6 +244,7 @@ h6 {
   height: 100vh;
   background: url("../img/about/Jeff_02-min.jpg");
   background-size: cover;
+  background-position: 0% 20%;
 }
 
 #hero:before {
