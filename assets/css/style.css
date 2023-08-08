@@ -1106,3 +1106,39 @@ section {
     padding-right: 20px 15px;
   }
 }
+.marquee {
+  margin-top: 25px;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  padding: 10px 0;
+  background: #149ddd;
+  font-family: Roobert;
+  font-style: normal;
+  font-weight: normal;
+  min-width: 200vw;
+  animation: marqueemove 40s linear infinite;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.marquee:hover {
+  animation-play-state: paused;
+}
+.marquee div {
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+  white-space: nowrap;
+  margin-left: 0px;
+  font-family: 'Inter';
+}
+@keyframes marqueemove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
