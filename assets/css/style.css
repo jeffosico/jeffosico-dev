@@ -1106,6 +1106,9 @@ section {
     padding-right: 20px 15px;
   }
 }
+/*--------------------------------------------------------------
+# Custom CSS
+--------------------------------------------------------------*/
 .marquee {
   margin-top: 25px;
   position: relative;
@@ -1140,5 +1143,14 @@ section {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+.contact-img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+@media (min-width:990px){
+  .contact-img {
+    max-width: 280px;
   }
 }
