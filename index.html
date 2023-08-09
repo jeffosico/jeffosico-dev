@@ -843,6 +843,7 @@
             <form id="my-form" action="https://formspree.io/f/xqkvpkqg" method="POST" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
+                  <input type="hidden" name="ip-address" id="ip-address">
                   <label for="name">Your Name</label>
                   <input type="text" class="form-control" name="name" id="name" required>
                 </div>
@@ -902,13 +903,23 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
 <script>
+  /* Add "https://api.ipify.org?format=json" statement
+               this will communicate with the ipify servers in
+               order to retrieve the IP address $.getJSON will
+               load JSON-encoded data from the server using a
+               GET HTTP request */
+                
+               $.getJSON("https://api.ipify.org?format=json", function(data) {
+         
+         // Setting text of element P with id gfg
+         $("#ip-address").val(data.ip);
+     })
   var form = document.getElementById("my-form");
   
   async function handleSubmit(event) {
