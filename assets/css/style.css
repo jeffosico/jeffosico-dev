@@ -1109,11 +1109,11 @@ section {
 /*--------------------------------------------------------------
 # Custom CSS
 --------------------------------------------------------------*/
-.marquee {
+.marquee, .marquee2 {
   margin-top: 25px;
   position: relative;
   overflow: hidden;
-  height: auto;
+  height: 90px;
   padding: 10px 0;
   background: #149ddd;
   font-family: Roobert;
@@ -1125,10 +1125,14 @@ section {
   justify-content: space-evenly;
   align-items: center;
 }
-.marquee:hover {
+.marquee2 {
+  animation: marqueemove2 40s linear infinite;
+  margin-top: 0;
+}
+.marquee:hover, .marquee2:hover {
   animation-play-state: paused;
 }
-.marquee div {
+.marquee div, .marquee2 div {
   padding: 10px;
   font-size: 24px;
   font-weight: 800;
@@ -1137,6 +1141,7 @@ section {
   margin-left: 0px;
   font-family: 'Inter';
 }
+
 @keyframes marqueemove {
   0% {
     transform: translateX(0);
@@ -1152,5 +1157,13 @@ section {
 @media (min-width:990px){
   .contact-img {
     max-width: 280px;
+  }
+}
+@keyframes marqueemove2 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
