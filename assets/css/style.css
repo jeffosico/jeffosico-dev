@@ -1170,3 +1170,6 @@ section {
 .portfolio-wrap {
   cursor:pointer;
 }
+.portfolio-img {
+  box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
+}
