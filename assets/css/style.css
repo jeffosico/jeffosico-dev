@@ -1173,3 +1173,19 @@ section {
 .portfolio-img {
   box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
 }
+.nav-link {
+  color:#149ddd;
+}
+.img-laptop {
+  max-width: 1280px;
+}
+.img-tab {
+  max-width: 820px;
+}
+.img-mobile {
+  max-width: 400px;
+}
+.tab-content>.active {
+  display:flex;
+  justify-content: center;
+}
