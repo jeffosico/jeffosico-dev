@@ -1188,4 +1188,6 @@ section {
 .tab-content>.active {
   display:flex;
   justify-content: center;
+  max-height: 1000px;
+  overflow: auto;
 }
