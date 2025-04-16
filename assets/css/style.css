@@ -1195,3 +1195,6 @@ section {
   display:flex;
   justify-content: center;
 }
+.plus::after {
+  content:'+';
+}
