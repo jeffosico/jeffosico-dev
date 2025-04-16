@@ -1176,14 +1176,16 @@ section {
 .nav-link {
   color:#149ddd;
 }
-.img-laptop {
-  max-width: 1280px;
-}
-.img-tab {
-  max-width: 820px;
-}
-.img-mobile {
-  max-width: 400px;
+@media only screen and (max-width:767px){
+  .img-laptop {
+    max-width: 1280px;
+  }
+  .img-tab {
+    max-width: 820px;
+  }
+  .img-mobile {
+    max-width: 400px;
+  }
 }
 .tab-content>.active {
   display:flex;
