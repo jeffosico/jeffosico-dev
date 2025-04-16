@@ -1186,10 +1186,12 @@ section {
   .img-mobile {
     max-width: 400px;
   }
+  .tab-content>.active {
+    max-height: 800px;
+    overflow: auto;
+  }
 }
 .tab-content>.active {
   display:flex;
   justify-content: center;
-  max-height: 800px;
-  overflow: auto;
 }
