@@ -40,8 +40,8 @@ h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
-  bottom: 15px;
+  right: 95px;
+  bottom: 30px;
   z-index: 996;
   background: #149ddd;
   width: 40px;
