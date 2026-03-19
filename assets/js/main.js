@@ -134,16 +134,14 @@
   if (isSubPage) basePath = '../';
 
   function loadProjects() {
-    fetch(basePath + 'data/projects.json')
-      .then(function (res) { return res.json(); })
-      .then(function (projects) {
-        renderFeaturedProjects(projects);
-        renderProjectsGrid(projects);
-        setupFilters();
-      })
-      .catch(function (err) {
-        console.error('Error loading projects:', err);
-      });
+    var projects = window.PROJECTS || [];
+    if (!projects.length) {
+      console.error('No projects data found. Ensure data/projects.js is loaded.');
+      return;
+    }
+    renderFeaturedProjects(projects);
+    renderProjectsGrid(projects);
+    setupFilters();
   }
 
   /* ----------------------------------------------------------
@@ -179,13 +177,67 @@
   }
 
   /* ----------------------------------------------------------
+     Sort Projects
+  ---------------------------------------------------------- */
+  function parseProjectDate(dateStr) {
+    var d = new Date(dateStr);
+    return isNaN(d.getTime()) ? new Date(0) : d;
+  }
+
+  function sortProjects(projects, sortBy) {
+    var sorted = projects.slice();
+    switch (sortBy) {
+      case 'name-asc':
+        sorted.sort(function (a, b) { return a.title.localeCompare(b.title); });
+        break;
+      case 'name-desc':
+        sorted.sort(function (a, b) { return b.title.localeCompare(a.title); });
+        break;
+      case 'date-newest':
+        sorted.sort(function (a, b) { return parseProjectDate(b.date) - parseProjectDate(a.date); });
+        break;
+      case 'date-oldest':
+        sorted.sort(function (a, b) { return parseProjectDate(a.date) - parseProjectDate(b.date); });
+        break;
+    }
+    return sorted;
+  }
+
+  /* ----------------------------------------------------------
      Render All Projects Grid
   ---------------------------------------------------------- */
+  var allProjects = [];
+
   function renderProjectsGrid(projects) {
     var container = document.getElementById('projects-grid');
     if (!container) return;
 
-    projects.forEach(function (project) {
+    allProjects = projects;
+    var sortSelect = document.getElementById('sort-select');
+    var sortBy = sortSelect ? sortSelect.value : 'name-asc';
+    var sorted = sortProjects(projects, sortBy);
+
+    // Get existing cards and sort them in the DOM (no re-render needed)
+    var existingCards = Array.from(container.querySelectorAll('.project-card'));
+
+    if (existingCards.length > 0) {
+      // Sort existing DOM elements
+      var cardMap = {};
+      existingCards.forEach(function (card) {
+        var href = card.getAttribute('href') || '';
+        var slug = href.replace(basePath + 'portfolio/', '').replace('.html', '');
+        cardMap[slug] = card;
+      });
+
+      sorted.forEach(function (project) {
+        var card = cardMap[project.slug];
+        if (card) container.appendChild(card);
+      });
+      return;
+    }
+
+    // First render - create cards
+    sorted.forEach(function (project) {
       var card = document.createElement('a');
       card.className = 'project-card';
       card.href = basePath + 'portfolio/' + project.slug + '.html';
@@ -226,34 +278,46 @@
   /* ----------------------------------------------------------
      Project Filters
   ---------------------------------------------------------- */
+  function applyActiveFilter() {
+    var activeBtn = document.querySelector('.filter-btn.active');
+    var filter = activeBtn ? activeBtn.getAttribute('data-filter') : '*';
+    var cards = document.querySelectorAll('.project-card');
+    cards.forEach(function (card) {
+      if (filter === '*') {
+        card.classList.remove('hidden');
+        card.style.display = '';
+      } else {
+        var cats = card.getAttribute('data-categories') || '';
+        if (cats.indexOf(filter) !== -1) {
+          card.classList.remove('hidden');
+          card.style.display = '';
+        } else {
+          card.classList.add('hidden');
+          card.style.display = 'none';
+        }
+      }
+    });
+  }
+
   function setupFilters() {
     var filterBtns = document.querySelectorAll('.filter-btn');
-    var cards = document.querySelectorAll('.project-card');
 
     filterBtns.forEach(function (btn) {
       btn.addEventListener('click', function () {
         filterBtns.forEach(function (b) { b.classList.remove('active'); });
         btn.classList.add('active');
-
-        var filter = btn.getAttribute('data-filter');
-
-        cards.forEach(function (card) {
-          if (filter === '*') {
-            card.classList.remove('hidden');
-            card.style.display = '';
-          } else {
-            var cats = card.getAttribute('data-categories') || '';
-            if (cats.indexOf(filter) !== -1) {
-              card.classList.remove('hidden');
-              card.style.display = '';
-            } else {
-              card.classList.add('hidden');
-              card.style.display = 'none';
-            }
-          }
-        });
+        applyActiveFilter();
       });
     });
+
+    // Sort dropdown
+    var sortSelect = document.getElementById('sort-select');
+    if (sortSelect) {
+      sortSelect.addEventListener('change', function () {
+        renderProjectsGrid(allProjects);
+        applyActiveFilter();
+      });
+    }
   }
 
   /* ----------------------------------------------------------
@@ -304,14 +368,12 @@
     var slug = container.getAttribute('data-slug');
     if (!slug) return;
 
-    fetch('../data/projects.json')
-      .then(function (res) { return res.json(); })
-      .then(function (projects) {
-        var project = projects.find(function (p) { return p.slug === slug; });
-        if (!project) {
-          container.innerHTML = '<div class="container"><p>Project not found.</p></div>';
-          return;
-        }
+    var projects = window.PROJECTS || [];
+    var project = projects.find(function (p) { return p.slug === slug; });
+    if (!project) {
+      container.innerHTML = '<div class="container" style="padding:120px 24px"><p>Project not found.</p></div>';
+      return;
+    }
 
         // Hero section
         var heroHTML =
@@ -337,22 +399,45 @@
             '</div>' +
           '</section>';
 
-        // Screenshots
-        var screenshotsHTML = '';
+        // Screenshots with device preview
+        var images = [];
         if (project.screenshots && project.screenshots.length > 0) {
-          screenshotsHTML = project.screenshots.map(function (s) {
-            return '<img src="../' + s + '" alt="' + project.title + '" loading="lazy">';
-          }).join('');
+          images = project.screenshots;
         } else if (project.thumbnail) {
-          screenshotsHTML = '<img src="../' + project.thumbnail + '" alt="' + project.title + '" loading="lazy">';
+          images = [project.thumbnail];
         }
+
+        var imagesHTML = images.map(function (s) {
+          return '<img src="../' + s + '" alt="' + project.title + '" loading="lazy">';
+        }).join('');
+
+        var siteUrl = project.liveUrl || project.title;
+
+        var devicePreviewHTML =
+          '<div class="device-preview">' +
+            '<div class="device-tabs">' +
+              '<button class="device-tab active" data-device="desktop"><i class="fa-solid fa-desktop"></i><span>Desktop</span></button>' +
+              '<button class="device-tab" data-device="laptop"><i class="fa-solid fa-laptop"></i><span>Laptop</span></button>' +
+              '<button class="device-tab" data-device="tablet"><i class="fa-solid fa-tablet-screen-button"></i><span>Tablet</span></button>' +
+              '<button class="device-tab" data-device="mobile"><i class="fa-solid fa-mobile-screen-button"></i><span>Mobile</span></button>' +
+            '</div>' +
+            '<div class="device-frame" data-device="desktop">' +
+              '<div class="device-frame-bar">' +
+                '<span class="device-frame-dot"></span>' +
+                '<span class="device-frame-dot"></span>' +
+                '<span class="device-frame-dot"></span>' +
+                '<span class="device-frame-url">' + siteUrl + '</span>' +
+              '</div>' +
+              '<div class="device-frame-body">' + imagesHTML + '</div>' +
+            '</div>' +
+          '</div>';
 
         // Content section
         var contentHTML =
           '<section class="project-detail-content">' +
             '<div class="container">' +
               '<div class="project-detail-grid">' +
-                '<div class="project-screenshots">' + screenshotsHTML + '</div>' +
+                '<div class="project-screenshots">' + devicePreviewHTML + '</div>' +
                 '<div class="project-sidebar">' +
                   '<div class="project-info-card">' +
                     '<h3>Project Info</h3>' +
@@ -383,11 +468,18 @@
           if (img.complete) img.classList.add('loaded');
           else img.addEventListener('load', function () { img.classList.add('loaded'); });
         });
-      })
-      .catch(function (err) {
-        console.error('Error loading project:', err);
-        container.innerHTML = '<div class="container" style="padding:120px 24px"><p>Error loading project details.</p></div>';
-      });
+
+        // Device preview tabs
+        var deviceTabs = container.querySelectorAll('.device-tab');
+        var deviceFrame = container.querySelector('.device-frame');
+        deviceTabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            deviceTabs.forEach(function (t) { t.classList.remove('active'); });
+            tab.classList.add('active');
+            var device = tab.getAttribute('data-device');
+            deviceFrame.setAttribute('data-device', device);
+          });
+        });
   }
 
   /* ----------------------------------------------------------
