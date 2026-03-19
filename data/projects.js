@@ -36,6 +36,12 @@ window.PROJECTS = [
     "projectType": "Gig",
     "liveUrl": "https://agileplanners.com/",
     "thumbnail": "assets/img/portfolio/agileplanners/agile-planners.webp",
+    "deviceImages": {
+      "desktop": "assets/img/portfolio/agileplanners/agile-planners-desktop.webp",
+      "laptop": "assets/img/portfolio/agileplanners/agile-planners-laptop.webp",
+      "tablet": "assets/img/portfolio/agileplanners/agile-planners-tablet.webp",
+      "mobile": "assets/img/portfolio/agileplanners/agile-planners-mobile.webp"
+    },
     "screenshots": [],
     "categories": [
       "web-development"
@@ -139,6 +145,12 @@ window.PROJECTS = [
     "projectType": "Gig",
     "liveUrl": "https://butlersremovals.com.au/",
     "thumbnail": "assets/img/portfolio/butlers-removals/butlers-removals.webp",
+    "deviceImages": {
+      "desktop": "assets/img/portfolio/butlers-removals/butlersremovals-desktop.webp",
+      "laptop": "assets/img/portfolio/butlers-removals/butlersremovals-laptop.webp",
+      "tablet": "assets/img/portfolio/butlers-removals/butlersremovals-tablet.webp",
+      "mobile": "assets/img/portfolio/butlers-removals/butlersremovals-mobile.webp"
+    },
     "screenshots": [],
     "categories": [
       "web-development"
@@ -194,6 +206,12 @@ window.PROJECTS = [
     "projectType": "Gig",
     "liveUrl": "https://coolroomhirebrisbane.com.au/",
     "thumbnail": "assets/img/portfolio/coolroom-hire-brisbane/cool-room-hire-brisbane.webp",
+    "deviceImages": {
+      "desktop": "assets/img/portfolio/coolroom-hire-brisbane/cool-room-hire-brisbane-desktop.webp",
+      "laptop": "assets/img/portfolio/coolroom-hire-brisbane/cool-room-hire-brisbane-laptop.webp",
+      "tablet": "assets/img/portfolio/coolroom-hire-brisbane/cool-room-hire-brisbane-tablet.webp",
+      "mobile": "assets/img/portfolio/coolroom-hire-brisbane/cool-room-hire-brisbane-mobile.webp"
+    },
     "screenshots": [],
     "categories": [
       "web-development"
@@ -271,6 +289,12 @@ window.PROJECTS = [
     "projectType": "Gig",
     "liveUrl": "https://firstchoiceroofing.com.au/",
     "thumbnail": "assets/img/portfolio/firstchoiceroofing/firstchoiceroofing.webp",
+    "deviceImages": {
+      "desktop": "assets/img/portfolio/firstchoiceroofing/firstchoiceroofing-desktop.webp",
+      "laptop": "assets/img/portfolio/firstchoiceroofing/firstchoiceroofing-laptop.webp",
+      "tablet": "assets/img/portfolio/firstchoiceroofing/firstchoiceroofing-tablet.webp",
+      "mobile": "assets/img/portfolio/firstchoiceroofing/firstchoiceroofing-mobile.webp"
+    },
     "screenshots": [],
     "categories": [
       "web-development"
@@ -401,6 +425,12 @@ window.PROJECTS = [
     "projectType": "Gig",
     "liveUrl": "https://misbiw.com/",
     "thumbnail": "assets/img/portfolio/misbiw/misbiw.webp",
+    "deviceImages": {
+      "desktop": "assets/img/portfolio/misbiw/misbiw-desktop.webp",
+      "laptop": "assets/img/portfolio/misbiw/misbiw-laptop.webp",
+      "tablet": "assets/img/portfolio/misbiw/misbiw-tablet.webp",
+      "mobile": "assets/img/portfolio/misbiw/misbiw-mobile.webp"
+    },
     "screenshots": [],
     "categories": [
       "web-development"
@@ -536,6 +566,12 @@ window.PROJECTS = [
     "projectType": "Gig",
     "liveUrl": "https://smileville.com.au/",
     "thumbnail": "assets/img/portfolio/smile-ville/smileville-1.webp",
+    "deviceImages": {
+      "desktop": "assets/img/portfolio/smile-ville/smileville.webp",
+      "laptop": "assets/img/portfolio/smile-ville/smileville-laptop.webp",
+      "tablet": "assets/img/portfolio/smile-ville/smileville-tab.webp",
+      "mobile": "assets/img/portfolio/smile-ville/smileville-mobile.webp"
+    },
     "screenshots": [],
     "categories": [
       "web-development"
@@ -586,6 +622,12 @@ window.PROJECTS = [
     "projectType": "Gig",
     "liveUrl": "https://stormguardroofrepairs.com.au/",
     "thumbnail": "assets/img/portfolio/stormguardroofrepairs/stormguardroofrepairs.webp",
+    "deviceImages": {
+      "desktop": "assets/img/portfolio/stormguardroofrepairs/stormguardroofrepairs-desktop.webp",
+      "laptop": "assets/img/portfolio/stormguardroofrepairs/stormguardroofrepairs-laptop.webp",
+      "tablet": "assets/img/portfolio/stormguardroofrepairs/stormguardroofrepairs-tablet.webp",
+      "mobile": "assets/img/portfolio/stormguardroofrepairs/stormguardroofrepairs-mobile.webp"
+    },
     "screenshots": [],
     "categories": [
       "web-development"
@@ -637,6 +679,12 @@ window.PROJECTS = [
     "projectType": "Gig",
     "liveUrl": "https://www.theproviderpartner.com/",
     "thumbnail": "assets/img/portfolio/theproviderpartner/tpp.webp",
+    "deviceImages": {
+      "desktop": "assets/img/portfolio/theproviderpartner/tpp-desktop.webp",
+      "laptop": "assets/img/portfolio/theproviderpartner/tpp-laptop.webp",
+      "tablet": "assets/img/portfolio/theproviderpartner/tpp-tablet.webp",
+      "mobile": "assets/img/portfolio/theproviderpartner/tpp-mobile.webp"
+    },
     "screenshots": [],
     "categories": [
       "web-development"
