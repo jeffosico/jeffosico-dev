@@ -217,8 +217,26 @@
     var sortBy = sortSelect ? sortSelect.value : 'name-asc';
     var sorted = sortProjects(projects, sortBy);
 
-    container.innerHTML = '';
+    // Get existing cards and sort them in the DOM (no re-render needed)
+    var existingCards = Array.from(container.querySelectorAll('.project-card'));
 
+    if (existingCards.length > 0) {
+      // Sort existing DOM elements
+      var cardMap = {};
+      existingCards.forEach(function (card) {
+        var href = card.getAttribute('href') || '';
+        var slug = href.replace(basePath + 'portfolio/', '').replace('.html', '');
+        cardMap[slug] = card;
+      });
+
+      sorted.forEach(function (project) {
+        var card = cardMap[project.slug];
+        if (card) container.appendChild(card);
+      });
+      return;
+    }
+
+    // First render - create cards
     sorted.forEach(function (project) {
       var card = document.createElement('a');
       card.className = 'project-card';
