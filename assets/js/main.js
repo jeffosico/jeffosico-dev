@@ -1,262 +1,399 @@
-/**
-* Template Name: iPortfolio
-* Updated: Jul 27 2023 with Bootstrap v5.3.1
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-(function() {
-  "use strict";
+/* ============================================================
+   Jeff Osico Portfolio - Main JavaScript
+   ============================================================ */
+(function () {
+  'use strict';
 
-  /**
-   * Easy selector helper function
-   */
-  const select = (el, all = false) => {
-    el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
-    }
+  /* ----------------------------------------------------------
+     Theme Toggle
+  ---------------------------------------------------------- */
+  const themeToggle = document.getElementById('theme-toggle');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    const icon = themeToggle.querySelector('i');
+    icon.className = theme === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
   }
 
-  /**
-   * Easy event listener function
-   */
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
-      } else {
-        selectEl.addEventListener(type, listener)
+  const savedTheme = localStorage.getItem('theme') || (prefersDark.matches ? 'dark' : 'dark');
+  setTheme(savedTheme);
+
+  themeToggle.addEventListener('click', function () {
+    const current = document.documentElement.getAttribute('data-theme');
+    setTheme(current === 'dark' ? 'light' : 'dark');
+  });
+
+  /* ----------------------------------------------------------
+     Navbar Scroll Effect
+  ---------------------------------------------------------- */
+  const navbar = document.getElementById('navbar');
+  function handleNavScroll() {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  }
+  window.addEventListener('scroll', handleNavScroll, { passive: true });
+  handleNavScroll();
+
+  /* ----------------------------------------------------------
+     Active Nav Link on Scroll
+  ---------------------------------------------------------- */
+  const navLinks = document.querySelectorAll('.nav-links .nav-link');
+  const sections = document.querySelectorAll('section[id]');
+
+  function updateActiveNav() {
+    const scrollPos = window.scrollY + 200;
+    sections.forEach(function (section) {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      const id = section.getAttribute('id');
+      if (scrollPos >= top && scrollPos < top + height) {
+        navLinks.forEach(function (link) {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('active');
+          }
+        });
       }
-    }
+    });
   }
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
 
-  /**
-   * Easy on scroll event listener 
-   */
-  const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-  }
+  /* ----------------------------------------------------------
+     Mobile Navigation
+  ---------------------------------------------------------- */
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const navLinksContainer = document.getElementById('nav-links');
 
-  /**
-   * Navbar links active state on scroll
-   */
-  let navbarlinks = select('#navbar .scrollto', true)
-  const navbarlinksActive = () => {
-    let position = window.scrollY + 200
-    navbarlinks.forEach(navbarlink => {
-      if (!navbarlink.hash) return
-      let section = select(navbarlink.hash)
-      if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active')
-      } else {
-        navbarlink.classList.remove('active')
-      }
-    })
-  }
-  window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive)
+  mobileToggle.addEventListener('click', function () {
+    mobileToggle.classList.toggle('active');
+    navLinksContainer.classList.toggle('mobile-open');
+    document.body.style.overflow = navLinksContainer.classList.contains('mobile-open') ? 'hidden' : '';
+  });
 
-  /**
-   * Scrolls to an element with header offset
-   */
-  const scrollto = (el) => {
-    let elementPos = select(el).offsetTop
-    window.scrollTo({
-      top: elementPos,
-      behavior: 'smooth'
-    })
-  }
-
-  /**
-   * Back to top button
-   */
-  let backtotop = select('.back-to-top')
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
-      } else {
-        backtotop.classList.remove('active')
-      }
-    }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
-  }
-
-  /**
-   * Mobile nav toggle
-   */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('body').classList.toggle('mobile-nav-active')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
-
-  /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
-  on('click', '.scrollto', function(e) {
-    if (select(this.hash)) {
-      e.preventDefault()
-
-      let body = select('body')
-      if (body.classList.contains('mobile-nav-active')) {
-        body.classList.remove('mobile-nav-active')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
-      scrollto(this.hash)
-    }
-  }, true)
-
-  /**
-   * Scroll with ofset on page load with hash links in the url
-   */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash)
-      }
+  navLinksContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('nav-link')) {
+      mobileToggle.classList.remove('active');
+      navLinksContainer.classList.remove('mobile-open');
+      document.body.style.overflow = '';
     }
   });
 
-  /**
-   * Hero type effect
-   */
-  const typed = select('.typed')
-  if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
+  /* ----------------------------------------------------------
+     Scroll Animations
+  ---------------------------------------------------------- */
+  const animateElements = document.querySelectorAll('[data-animate]');
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        const delay = entry.target.getAttribute('data-delay') || 0;
+        setTimeout(function () {
+          entry.target.classList.add('visible');
+        }, parseInt(delay));
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  animateElements.forEach(function (el) { observer.observe(el); });
+
+  /* ----------------------------------------------------------
+     Back to Top
+  ---------------------------------------------------------- */
+  const backToTop = document.getElementById('back-to-top');
+  window.addEventListener('scroll', function () {
+    backToTop.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+
+  backToTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ----------------------------------------------------------
+     Lazy Load Images
+  ---------------------------------------------------------- */
+  document.addEventListener('DOMContentLoaded', function () {
+    var imgs = document.querySelectorAll('img[loading="lazy"]');
+    imgs.forEach(function (img) {
+      if (img.complete) {
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', function () {
+          img.classList.add('loaded');
+        });
+      }
+    });
+  });
+
+  /* ----------------------------------------------------------
+     Load Projects from JSON
+  ---------------------------------------------------------- */
+  // Determine base path for assets
+  var basePath = '';
+  var isSubPage = window.location.pathname.includes('/portfolio/');
+  if (isSubPage) basePath = '../';
+
+  function loadProjects() {
+    fetch(basePath + 'data/projects.json')
+      .then(function (res) { return res.json(); })
+      .then(function (projects) {
+        renderFeaturedProjects(projects);
+        renderProjectsGrid(projects);
+        setupFilters();
+      })
+      .catch(function (err) {
+        console.error('Error loading projects:', err);
+      });
+  }
+
+  /* ----------------------------------------------------------
+     Render Featured Projects
+  ---------------------------------------------------------- */
+  function renderFeaturedProjects(projects) {
+    var container = document.getElementById('featured-projects');
+    if (!container) return;
+
+    var featured = projects.filter(function (p) { return p.featured; }).slice(0, 6);
+
+    featured.forEach(function (project) {
+      var card = document.createElement('a');
+      card.className = 'featured-card';
+      card.href = basePath + 'portfolio/' + project.slug + '.html';
+
+      var techHTML = project.techStack.slice(0, 4).map(function (t) {
+        return '<span class="tech-pill">' + t + '</span>';
+      }).join('');
+
+      card.innerHTML =
+        '<div class="featured-card-image">' +
+          '<img src="' + basePath + project.thumbnail + '" alt="' + project.title + '" loading="lazy">' +
+        '</div>' +
+        '<div class="featured-card-body">' +
+          '<h3>' + project.title + '</h3>' +
+          '<p>' + project.shortDescription + '</p>' +
+          '<div class="featured-card-tech">' + techHTML + '</div>' +
+        '</div>';
+
+      container.appendChild(card);
     });
   }
 
-  /**
-   * Skills animation
-   */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
+  /* ----------------------------------------------------------
+     Render All Projects Grid
+  ---------------------------------------------------------- */
+  function renderProjectsGrid(projects) {
+    var container = document.getElementById('projects-grid');
+    if (!container) return;
+
+    projects.forEach(function (project) {
+      var card = document.createElement('a');
+      card.className = 'project-card';
+      card.href = basePath + 'portfolio/' + project.slug + '.html';
+      card.setAttribute('data-categories', project.categories.join(' '));
+
+      var techHTML = project.techStack.slice(0, 3).map(function (t) {
+        return '<span class="tech-pill">' + t + '</span>';
+      }).join('');
+
+      card.innerHTML =
+        '<div class="project-card-image">' +
+          '<img src="' + basePath + project.thumbnail + '" alt="' + project.title + '" loading="lazy">' +
+        '</div>' +
+        '<div class="project-card-body">' +
+          '<h3>' + project.title + '</h3>' +
+          '<div class="project-card-tech">' + techHTML + '</div>' +
+        '</div>' +
+        '<div class="project-card-overlay">' +
+          '<span>View Project</span>' +
+        '</div>';
+
+      container.appendChild(card);
+    });
+
+    // Trigger lazy load for newly added images
+    var imgs = container.querySelectorAll('img[loading="lazy"]');
+    imgs.forEach(function (img) {
+      if (img.complete) {
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', function () {
+          img.classList.add('loaded');
         });
       }
-    })
+    });
   }
 
-  /**
-   * Porfolio isotope and filter
-   */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
+  /* ----------------------------------------------------------
+     Project Filters
+  ---------------------------------------------------------- */
+  function setupFilters() {
+    var filterBtns = document.querySelectorAll('.filter-btn');
+    var cards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        filterBtns.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+
+        var filter = btn.getAttribute('data-filter');
+
+        cards.forEach(function (card) {
+          if (filter === '*') {
+            card.classList.remove('hidden');
+            card.style.display = '';
+          } else {
+            var cats = card.getAttribute('data-categories') || '';
+            if (cats.indexOf(filter) !== -1) {
+              card.classList.remove('hidden');
+              card.style.display = '';
+            } else {
+              card.classList.add('hidden');
+              card.style.display = 'none';
+            }
+          }
+        });
       });
+    });
+  }
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+  /* ----------------------------------------------------------
+     Contact Form
+  ---------------------------------------------------------- */
+  var form = document.getElementById('contact-form');
+  if (form) {
+    // Get IP address
+    fetch('https://api.ipify.org?format=json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var ipField = document.getElementById('ip-address');
+        if (ipField) ipField.value = data.ip;
+      })
+      .catch(function () {});
 
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var status = document.getElementById('form-status');
+      var data = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function () {
+        status.className = 'form-status success';
+        status.textContent = 'Message sent! I\'ll get back to you within 24 hours.';
+        form.reset();
+        setTimeout(function () {
+          status.className = 'form-status';
+          status.style.display = 'none';
+        }, 4000);
+      }).catch(function () {
+        status.className = 'form-status error';
+        status.textContent = 'Something went wrong. Please try again or email me directly.';
+      });
+    });
+  }
+
+  /* ----------------------------------------------------------
+     Project Detail Page - Load from JSON
+  ---------------------------------------------------------- */
+  function loadProjectDetail() {
+    var container = document.getElementById('project-detail');
+    if (!container) return;
+
+    var slug = container.getAttribute('data-slug');
+    if (!slug) return;
+
+    fetch('../data/projects.json')
+      .then(function (res) { return res.json(); })
+      .then(function (projects) {
+        var project = projects.find(function (p) { return p.slug === slug; });
+        if (!project) {
+          container.innerHTML = '<div class="container"><p>Project not found.</p></div>';
+          return;
+        }
+
+        // Hero section
+        var heroHTML =
+          '<section class="project-detail-hero">' +
+            '<div class="container">' +
+              '<div class="breadcrumb">' +
+                '<a href="../">Home</a>' +
+                '<i class="fa-solid fa-chevron-right"></i>' +
+                '<a href="../#projects">Projects</a>' +
+                '<i class="fa-solid fa-chevron-right"></i>' +
+                '<span>' + project.title + '</span>' +
+              '</div>' +
+              '<h1>' + project.title + '</h1>' +
+              '<div class="featured-card-tech">' +
+                project.techStack.map(function (t) { return '<span class="tech-pill">' + t + '</span>'; }).join('') +
+              '</div>' +
+              '<div class="project-detail-meta">' +
+                '<div class="project-detail-meta-item"><span>Category</span><span>' + project.category + '</span></div>' +
+                '<div class="project-detail-meta-item"><span>Client</span><span>' + (project.client || 'N/A') + '</span></div>' +
+                '<div class="project-detail-meta-item"><span>Date</span><span>' + project.date + '</span></div>' +
+                '<div class="project-detail-meta-item"><span>Type</span><span>' + project.projectType + '</span></div>' +
+              '</div>' +
+            '</div>' +
+          '</section>';
+
+        // Screenshots
+        var screenshotsHTML = '';
+        if (project.screenshots && project.screenshots.length > 0) {
+          screenshotsHTML = project.screenshots.map(function (s) {
+            return '<img src="../' + s + '" alt="' + project.title + '" loading="lazy">';
+          }).join('');
+        } else if (project.thumbnail) {
+          screenshotsHTML = '<img src="../' + project.thumbnail + '" alt="' + project.title + '" loading="lazy">';
+        }
+
+        // Content section
+        var contentHTML =
+          '<section class="project-detail-content">' +
+            '<div class="container">' +
+              '<div class="project-detail-grid">' +
+                '<div class="project-screenshots">' + screenshotsHTML + '</div>' +
+                '<div class="project-sidebar">' +
+                  '<div class="project-info-card">' +
+                    '<h3>Project Info</h3>' +
+                    '<ul class="project-info-list">' +
+                      '<li><strong>Category</strong><span>' + project.category + '</span></li>' +
+                      '<li><strong>Technologies</strong><span>' + project.techStack.join(', ') + '</span></li>' +
+                      '<li><strong>Client</strong><span>' + (project.client || 'N/A') + '</span></li>' +
+                      '<li><strong>Date</strong><span>' + project.date + '</span></li>' +
+                      '<li><strong>Type</strong><span>' + project.projectType + '</span></li>' +
+                      (project.liveUrl ? '<li><strong>URL</strong><a href="' + project.liveUrl + '" target="_blank">' + project.liveUrl + '</a></li>' : '') +
+                    '</ul>' +
+                    (project.liveUrl ? '<a href="' + project.liveUrl + '" target="_blank" class="btn btn-primary btn-full" style="margin-top:16px"><span>Visit Site</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>' : '') +
+                  '</div>' +
+                  '<div class="project-description-card">' +
+                    '<h3>About This Project</h3>' +
+                    '<p>' + project.fullDescription + '</p>' +
+                  '</div>' +
+                '</div>' +
+              '</div>' +
+            '</div>' +
+          '</section>';
+
+        container.innerHTML = heroHTML + contentHTML;
+
+        // Lazy load images
+        var imgs = container.querySelectorAll('img[loading="lazy"]');
+        imgs.forEach(function (img) {
+          if (img.complete) img.classList.add('loaded');
+          else img.addEventListener('load', function () { img.classList.add('loaded'); });
         });
-        this.classList.add('filter-active');
+      })
+      .catch(function (err) {
+        console.error('Error loading project:', err);
+        container.innerHTML = '<div class="container" style="padding:120px 24px"><p>Error loading project details.</p></div>';
+      });
+  }
 
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
-    }
+  /* ----------------------------------------------------------
+     Initialize
+  ---------------------------------------------------------- */
+  loadProjects();
+  loadProjectDetail();
 
-  });
-
-  /**
-   * Initiate portfolio lightbox 
-   */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
-
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
-  });
-
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
-  });
-
-  /**
-   * Initiate Pure Counter 
-   */
-  new PureCounter();
-
-})()
+})();
