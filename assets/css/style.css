@@ -1728,15 +1728,16 @@ img {
   .nav-links.mobile-open {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 72px;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    bottom: 0;
+    height: calc(100vh - 72px);
     background: var(--bg-primary);
     padding: 32px 24px;
     gap: 4px;
     z-index: 999;
+    overflow-y: auto;
     animation: slideDown 0.3s ease;
   }
 
