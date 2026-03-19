@@ -154,13 +154,24 @@
         <!-- Populated by JS -->
       </div>
 
-      <div class="projects-filter" data-animate="fade-up" data-delay="200">
-        <button class="filter-btn active" data-filter="*">All</button>
-        <button class="filter-btn" data-filter="web-development">Web Development</button>
-        <button class="filter-btn" data-filter="web-design">Web Design</button>
-        <button class="filter-btn" data-filter="ecommerce-development">E-commerce</button>
-        <button class="filter-btn" data-filter="site-duplication">Site Duplication</button>
-        <button class="filter-btn" data-filter="custom-web-solution">Custom Solution</button>
+      <div class="projects-toolbar" data-animate="fade-up" data-delay="200">
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="*">All</button>
+          <button class="filter-btn" data-filter="web-development">Web Development</button>
+          <button class="filter-btn" data-filter="web-design">Web Design</button>
+          <button class="filter-btn" data-filter="ecommerce-development">E-commerce</button>
+          <button class="filter-btn" data-filter="site-duplication">Site Duplication</button>
+          <button class="filter-btn" data-filter="custom-web-solution">Custom Solution</button>
+        </div>
+        <div class="projects-sort">
+          <label for="sort-select">Sort by</label>
+          <select id="sort-select" class="sort-select">
+            <option value="name-asc">Name (A-Z)</option>
+            <option value="name-desc">Name (Z-A)</option>
+            <option value="date-newest">Date (Newest)</option>
+            <option value="date-oldest">Date (Oldest)</option>
+          </select>
+        </div>
       </div>
       <div class="projects-grid" id="projects-grid" data-animate="fade-up" data-delay="300">
         <!-- Populated by JS -->
@@ -425,6 +436,7 @@
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 
+  <script src="data/projects.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
