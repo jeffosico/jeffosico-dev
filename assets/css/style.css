@@ -373,6 +373,23 @@ img {
   font-size: 1.25rem;
   color: var(--text-secondary);
   font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.hero-subrole {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: var(--accent-glow);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-image: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 20px;
 }
 
@@ -541,6 +558,10 @@ img {
 .about-skills h3 {
   font-size: 1.25rem;
   margin-bottom: 20px;
+}
+
+.about-skills h3.tools-heading {
+  margin-top: 28px;
 }
 
 .skills-grid {
@@ -1386,6 +1407,118 @@ img {
 }
 
 /* ============================================================
+   AI-DRIVEN DEVELOPMENT PROCESS
+   ============================================================ */
+.process {
+  background: var(--bg-secondary);
+}
+
+.process-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.process-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.process-step-number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.2;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.process-step-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.process-step-content:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.process-step-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+  color: var(--accent);
+  transition: all 0.3s;
+}
+
+.process-step-content:hover .process-step-icon {
+  background: var(--accent);
+  color: #fff;
+}
+
+.process-step-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.process-step-content p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.process-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.process-list li {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  padding: 5px 0;
+  padding-left: 16px;
+  position: relative;
+}
+
+.process-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ============================================================
    DEVICE PREVIEW TABS
    ============================================================ */
 .device-preview {
@@ -1513,6 +1646,12 @@ img {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+@media (max-width: 1200px) {
+  .process-timeline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1551,6 +1690,10 @@ img {
   }
 
   .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-timeline {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1624,6 +1767,15 @@ img {
 
   .section {
     padding: 64px 0;
+  }
+
+  .process-timeline {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  .process-step-number {
+    font-size: 2rem;
   }
 
   .projects-grid {
