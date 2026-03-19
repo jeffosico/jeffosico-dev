@@ -1,1130 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Jeff Clyde Mark R. Osico - Web Developer</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Template Main CSS File -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeff Osico - Front-End Web Developer & Designer</title>
+  <meta name="description" content="Jeff Clyde Mark Osico - Front-End Web Developer & Web Designer with 5+ years of experience specializing in WordPress, Shopify, and modern web technologies.">
+  <meta name="keywords" content="web developer, web designer, WordPress, Elementor, Shopify, front-end developer, Philippines">
+  <meta property="og:title" content="Jeff Osico - Front-End Web Developer & Designer">
+  <meta property="og:description" content="Building premium web experiences with 5+ years of expertise in WordPress, Shopify, and modern front-end technologies.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/about/Jeff_01_Headshot-min.jpg">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Updated: Jul 27 2023 with Bootstrap v5.3.1
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
-
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/about/Jeff_01_Headshot-min.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="/jeffosico-dev/">Jeff Clyde Mark R. Osico</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a target="_blank" href="https://www.facebook.com/jeffosico" class="facebook"><i
-              class="bx bxl-facebook"></i></a>
-          <a target="_blank" href="https://www.linkedin.com/in/jeff-clyde-mark-osico-969176265" class="linkedin"><i
-              class="bx bxl-linkedin"></i></a>
-          <a target="_blank" href="https://github.com/jeffosico/" class="github"><i class="bx bxl-github"></i></a>
-          <a target="_blank" href="https://www.onlinejobs.ph/jobseekers/info/1267683" class="onlinejobs"><i
-              class="bi bi-book"></i></a>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">jeff<span>osico</span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-              <span>Portfolio</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="#contact" class="nav-cta">Let's Talk</a>
+      </div>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </header><!-- End Header -->
+  </nav>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Jeff Clyde Mark R. Osico</h1>
-      <p>I'm a <span class="typed" data-typed-items="Web Developer, Web Designer, SEO Specialist, Automation Expert, System Admin"></span>
-      </p>
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About</h2>
-         <p>Hello there, I'm Jeff Clyde Mark Osico a Web Developer with over 5 years of experience specializing in content management systems, mainly WordPress.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/about/IMG_0350.webp" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Front-End Web Developer  &amp; Web Designer</h3>
-            <p class="fst-italic">
-              I specialize in building custom websites using WordPress and Elementor, I also works on other pages builders like Divi, Breakdance, and Beaver.<br>
-              I also have first-hand experience with other platforms namely Shopify, GoHighLevel, Wix, Webflow, and many more.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>12 Jan 1999</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a
-                        href="https://jeffosico.github.io/jeffosico-dev/">https://jeffosico.github.io/jeffosico-dev/</a></span>
-                  </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+63 970 094 1227</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Butuan City, Philippines</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>26</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BSIT Major in
-                      Programming</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Rate:</strong> <span>$10/hr (Negotiable)</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Availability:</strong> <span
-                      style="color:green">Full-Time / Part-Time / Freelance</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Facts Section ======= -->
-    <section id="facts" class="facts">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Facts</h2>
-          <p>Throughout my journey as a web developer, I worked with multiple clients with various different tasks, sharpening my skills as the years go by.</p>
-        </div>
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1"
-                class="purecounter plus"></span>
-              <p><strong>Happy Clients</strong> worked with</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="53" data-purecounter-duration="1"
-                class="purecounter plus"></span>
-              <p><strong>Projects</strong> worked on</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="count-box">
-              <i class="bi bi-lightbulb"></i>
-              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p><strong>Personal Projects</strong> made</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="count-box">
-              <i class="bi bi-calendar-week"></i>
-              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
-                class="purecounter plus"></span>
-              <p><strong>Years</strong> of working experience</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Facts Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>As a web developer, I am experienced with a wide range of tools, technologies, and platforms.
-            <br><br>
-            Here’s a quick look at the skills I bring to the table:</p>
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-4" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">HTML <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">CSS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Bootstrap <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">jQuery <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">WordPress/CMS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-            
-            <div class="progress">
-              <span class="skill">PHP <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Elementor<i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Divi<i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Shopify <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="progress">
-              <span class="skill">SEO <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Analytics (GTM,GA4,FB Pixels) <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Automation (Zapier, Make, n8n, Pabbly)<i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">SysAdmin (Servers, Hostings, Migrations, DNS, SSL)<i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-      <div class="marquee" data-aos="fade-up" data-aos-delay="400">
-        <div><img src="assets/img/skills/woocommerce-logo.png" alt="" width="74px"></div>
-        <div><i class="fa-brands fa-html5 fa-2xl"></i></div>
-        <div><i class="fa-brands fa-css3 fa-2xl"></i></div>
-        <div><i class="fa-brands fa-bootstrap fa-2xl"></i></div>
-        <div><img src="assets/img/skills/ga4.png" alt="" width="100px"></div>
-        <div><img src="assets/img/skills/divi.png" alt="" width="54px"></div>
-        <div><i class="fa-brands fa-square-js fa-2xl"></i></div>
-        <div><img src="assets/img/skills/jquery-logo.png" alt="" width="54px"></div>
-        <div><i class="fa-brands fa-php fa-2xl"></i></div>
-        <div><i class="fa-brands fa-python fa-2xl"></i></div>
-        <div><img src="assets/img/skills/django-logo.png" alt="" width="74px"></div>
-        <div><i class="fa-brands fa-wordpress fa-2xl"></i></div>
-        <div><i class="fa-brands fa-shopify fa-2xl"></i></div>
-      </div>
-
-      <div class="marquee2" data-aos="fade-up" data-aos-delay="400">
-        <div><img src="assets/img/skills/photoshop-logo.png" alt="" width="54px"></div>
-        <div><img src="assets/img/skills/cpanel-logo.png" alt="" width="100px"></div>
-        <div><i class="fa-brands fa-wix fa-2xl"></i></div>
-        <div><img src="assets/img/skills/mysql-logo.png" alt="" width="100px"></div>
-        <div><img src="assets/img/skills/gtm.png" alt="" width="100px"></div>
-        <div><i class="fa-brands fa-elementor fa-2xl"></i></div>
-        <div><i class="fa-brands fa-yoast fa-2xl"></i></div>
-        <div><i class="fa-brands fa-wpforms fa-2xl"></i></div>
-        <div><img src="assets/img/skills/acf-logo.png" alt="" width="54px"></div>
-        <div><i class="fa-brands fa-themeco fa-2xl"></i></div>
-      </div>
-    </section><!-- End Skills Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p>Welcome to my resume, where you can explore my professional background and gain insights into my past work
-            experiences.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>JEFF CLYDE MARK R. OSICO</h4>
-              <p><em>Web Developer specializing in Web development with more than 5 years of experience.</em></p>
-              <ul>
-                <li>Butuan City, Philippines</li>
-                <li>+639700941227</li>
-                <li>jeffclydemarkosico@gmail.com</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <!-- <div class="resume-item">
-              <h4>Primary</h4>
-              <h5>2004 - 2010</h5>
-              <p><em>Butuan Central Elementary School, Butuan City, PH</em></p>
-            </div>
-            <div class="resume-item">
-              <h4>SECONDARY</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Agusan National High School, Butuan City, PH</em></p>
-            </div> -->
-            <div class="resume-item">
-              <h4>BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</h4>
-              <h5>2015 - 2020</h5>
-              <p><em>ACLC College of Butuan, Butuan City, PH</em></p>
-              <p>BSIT Programmer of the Year</p>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Office Support Staff</h4>
-              <h5>08/09/2021 - 10/31/2021</h5>
-              <p><em>Civil Service Caraga, Butuan City, Philippines</em></p>
-              <ul>
-                <li>Performing administrative and technical tasks.</li>
-                <li>Publishing of job application in CSC portal.</li>
-                <li>Video and photo editing for CSC activities and programs.</li>
-                <li>esponds to queries and performs other related functions.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>FULL-STACK WEB DEVELOPER</h4>
-              <h5>03/09/2020 - 07/01/2022</h5>
-              <p><em>Freelance, Butuan City, Philippines </em></p>
-              <ul>
-                <li>Design, build, or maintain web sites, using authoring or scripting languages, content creation
-                  tools, management tools, and digital media.</li>
-                <li>Write, design, or edit web page content, or direct others producing content.</li>
-                <li>Recommend and implement performance improvements.</li>
-                <li>Carry out quality assurance tests to discover errors and optimize usability.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>SOFTWARE/SCRIPT DEVELOPER</h4>
-              <h5>09/28/2022 - 04/03/2023</h5>
-              <p><em>Freelance, Butuan City, Philippines</em></p>
-              <ul>
-                <li>Creating scripts for social automations, e.g. Tinder, Snapchat, Reddit.</li>
-                <li>Maintaining scripts' effectiveness & performance.</li>
-                <li>Performing scripts executions.</li>
-                <li>Created POS System using Django, Bootstrap, and JQuery.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>WEB DEVELOPER/WEB DESIGNER (Voluntary resignation)</h4>
-              <h5>02/21/2023 - 05/16/2023</h5>
-              <p><em>Futura Digital, Shenzen, China</em></p>
-              <ul>
-                <li>Determining the structure and design of web pages.</li>
-                <li>Developing features to enhance the user experience.</li>
-                <li>Developing E-commerce websites.</li>
-                <li>Collaborating with project managers and other team members to plan, design.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>FRONT-END WEB DEVELOPER (Contractual(</h4>
-              <h5>05/29/2023 - 08/01/2023</h5>
-              <p><em>Elite Digital, England, United Kingdom</em></p>
-              <ul>
-                <li>Developing websites using Theme.co’s Cornerstone Builder with WordPress.</li>
-                <li>Adding custom features and functions to websites.</li>
-                <li>Maintaining existing websites.</li>
-                <li>Overhaul of whole website design.</li>
-                <li>Suggests site improvements to clients.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>DEV-OP/WEB DEVELOPER (Full-Time)</h4>
-              <h5>06/12/2023 - 04/05/25</h5>
-              <p><em>Digital Offsider, Perth, WA, Australia</em></p>
-              <ul>
-                <li>Design, build, or maintain web sites, using authoring or scripting languages, content creation
-                  tools, management tools, and digital media.</li>
-                <li>Write, design, or edit web page content, or direct others producing content.</li>
-                <li>Carry out quality assurance tests to discover errors and optimize usability.</li>
-                <li>Maintain and optimize existing websites.</li>
-                <li>Recommend and implement performance improvements.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>FRONT-END WEB DEVELOPER (Contractual)</h4>
-              <h5>04/12/2025 - 08/10/25</h5>
-              <p><em>Restoration Built Agency, Las Vegas, Nevada, USA</em></p>
-              <ul>
-                <li>Build pages with Elementor page builder.</li>
-                <li>Create and publish blog posts.</li>
-                <li>Maintain and optimize existing websites.</li>
-                <li>Collaborate and communicate with the team for improvements.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Here's my portfolio showcasing the best of work throughout my career.
-            <em><b>Please note that this doesn't show all of the projects that I worked on.</b></em>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge" data-animate="fade-up">Available for work</div>
+          <h1 data-animate="fade-up" data-delay="100">
+            Hi, I'm <span class="gradient-text">Jeff Osico</span>
+          </h1>
+          <p class="hero-role" data-animate="fade-up" data-delay="200">Front-End Web Developer & Web Designer</p>
+          <p class="hero-desc" data-animate="fade-up" data-delay="300">
+            I build premium, conversion-focused websites that look great and perform even better. 5+ years crafting digital experiences with WordPress, Shopify, and modern web technologies.
           </p>
+          <div class="hero-ctas" data-animate="fade-up" data-delay="400">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+          <div class="hero-stats" data-animate="fade-up" data-delay="500">
+            <div class="stat">
+              <span class="stat-number">35+</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Years Exp.</span>
+            </div>
+          </div>
         </div>
+        <div class="hero-visual" data-animate="fade-left" data-delay="300">
+          <div class="hero-image-wrapper">
+            <img src="assets/img/about/Jeff_01_Headshot-min.jpg" alt="Jeff Osico" class="hero-image" loading="eager">
+            <div class="hero-image-decoration"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bg-grid"></div>
+  </section>
 
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".web-development">Web Development</li>
-              <li data-filter=".web-design">Web Design</li>
-              <li data-filter=".ecommerce-development">E-commerce Development</li>
-              <li data-filter=".site-duplication">Site Duplication</li>
-              <li data-filter=".custom-web-solution">Custom Web Solution</li>
-              <li data-filter=".website-maintenance-support">Website Maintenance & Support</li>
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">About Me</span>
+        <h2>Turning designs into <span class="gradient-text">pixel-perfect</span> reality</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-content" data-animate="fade-up" data-delay="100">
+          <p class="about-intro">
+            I'm Jeff Clyde Mark Osico, a Web Developer with over 5 years of experience specializing in content management systems, mainly WordPress. I build custom websites using WordPress and Elementor, and also work with Divi, Breakdance, and Beaver Builder.
+          </p>
+          <p>
+            I also have hands-on experience with Shopify, GoHighLevel, Wix, Webflow, and many more platforms. Whether it's a brand-new build, a site migration, or ongoing maintenance, I deliver clean, fast, and conversion-focused websites.
+          </p>
+          <div class="about-details">
+            <div class="detail-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Butuan City, Philippines</span>
+            </div>
+            <div class="detail-item">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>BSIT Major in Programming</span>
+            </div>
+            <div class="detail-item">
+              <i class="fa-solid fa-clock"></i>
+              <span>Full-Time / Part-Time / Freelance</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-skills" data-animate="fade-up" data-delay="200">
+          <h3>Tech Stack</h3>
+          <div class="skills-grid">
+            <div class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</div>
+            <div class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+            <div class="skill-tag"><i class="fa-brands fa-js-square"></i> JavaScript</div>
+            <div class="skill-tag"><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
+            <div class="skill-tag"><i class="fa-brands fa-wordpress"></i> WordPress</div>
+            <div class="skill-tag"><i class="fa-brands fa-elementor"></i> Elementor</div>
+            <div class="skill-tag"><i class="fa-brands fa-shopify"></i> Shopify</div>
+            <div class="skill-tag"><i class="fa-brands fa-php"></i> PHP</div>
+            <div class="skill-tag"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="skill-tag"><i class="fa-solid fa-database"></i> MySQL</div>
+            <div class="skill-tag"><i class="fa-solid fa-chart-line"></i> SEO</div>
+            <div class="skill-tag"><i class="fa-solid fa-chart-bar"></i> GA4/GTM</div>
+            <div class="skill-tag"><i class="fa-solid fa-robot"></i> Automation</div>
+            <div class="skill-tag"><i class="fa-solid fa-server"></i> SysAdmin</div>
+            <div class="skill-tag"><i class="fa-brands fa-wix"></i> Wix</div>
+            <div class="skill-tag"><i class="fa-solid fa-paint-brush"></i> Divi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Portfolio</span>
+        <h2>Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-desc">A selection of my best work across web development, design, and e-commerce.</p>
+      </div>
+      <div class="featured-projects" id="featured-projects" data-animate="fade-up" data-delay="100">
+        <!-- Populated by JS -->
+      </div>
+
+      <div class="projects-filter" data-animate="fade-up" data-delay="200">
+        <button class="filter-btn active" data-filter="*">All</button>
+        <button class="filter-btn" data-filter="web-development">Web Development</button>
+        <button class="filter-btn" data-filter="web-design">Web Design</button>
+        <button class="filter-btn" data-filter="ecommerce-development">E-commerce</button>
+        <button class="filter-btn" data-filter="site-duplication">Site Duplication</button>
+        <button class="filter-btn" data-filter="custom-web-solution">Custom Solution</button>
+      </div>
+      <div class="projects-grid" id="projects-grid" data-animate="fade-up" data-delay="300">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Experience</span>
+        <h2>Professional <span class="gradient-text">Journey</span></h2>
+      </div>
+      <div class="timeline" data-animate="fade-up" data-delay="100">
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Front-End Web Developer</h3>
+              <span class="timeline-badge">Contractual</span>
+            </div>
+            <p class="timeline-company">Restoration Built Agency, Las Vegas, Nevada, USA</p>
+            <span class="timeline-date">Apr 2025 - Aug 2025</span>
+            <ul class="timeline-list">
+              <li>Build pages with Elementor page builder</li>
+              <li>Create and publish blog posts</li>
+              <li>Maintain and optimize existing websites</li>
+              <li>Collaborate and communicate with the team for improvements</li>
             </ul>
           </div>
         </div>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/misbiw.html'">
-              <img src="assets/img/portfolio/misbiw/misbiw.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/misbiw/misbiw.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Smile Ville"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/misbiw.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Dev-Op / Web Developer</h3>
+              <span class="timeline-badge">Full-Time</span>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/stormguardroofrepairs.html'">
-              <img src="assets/img/portfolio/stormguardroofrepairs/stormguardroofrepairs.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/stormguardroofrepairs/stormguardroofrepairs.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Smile Ville"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/stormguardroofrepairs.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/firstchoiceroofing.html'">
-              <img src="assets/img/portfolio/firstchoiceroofing/firstchoiceroofing.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/firstchoiceroofing/firstchoiceroofing.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Smile Ville"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/firstchoiceroofing.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/theproviderpartner.html'">
-              <img src="assets/img/portfolio/theproviderpartner/tpp.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/theproviderpartner/tpp.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Smile Ville"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/theproviderpartner.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/creative8collab.html'">
-              <img src="assets/img/portfolio/creative8collab/creative8collab-1.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/creative8collab/creative8collab-1.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Creative 8 Collab"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/creative8collab.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/agileplanners.html'">
-              <img src="assets/img/portfolio/agileplanners/agile-planners.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/agileplanners/agile-planners.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Creative 8 Collab"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/agileplanners.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/smileville.html'">
-              <img src="assets/img/portfolio/smile-ville/smileville-1.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/smile-ville/smileville-1.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Smile Ville"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/smileville.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/attention-detailing.html'">
-              
-              <img src="assets/img/portfolio/attention-detailing/attention-detailing-1.webp" class="img-fluid" alt="">
-              
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/attention-detailing/attention-detailing-1.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Attention Detailing"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/attention-detailing.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/novusnorthside.html'">
-              <img src="assets/img/portfolio/novusnorthside/novusnorthside-1.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/novusnorthside/novusnorthside-1.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Novus North Side"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/novusnorthside.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/coolroom-hire-brisbane.html'">
-              <img src="assets/img/portfolio/coolroom-hire-brisbane/cool-room-hire-brisbane.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/coolroom-hire-brisbane/cool-room-hire-brisbane.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Cool Room Hire Brisbane"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/coolroom-hire-brisbane.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/butlers-removals.html'">
-              <img src="assets/img/portfolio/butlers-removals/butlers-removals.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/butlers-removals/butlers-removals.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Butlers Removals"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/butlers-removals.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/whitleah-asphalt.html'" >
-              <img src="assets/img/portfolio/whitleah-asphalt/whitleah-asphalt-1.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/whitleah-asphalt/whitleah-asphalt-1.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Whitleah Asphalt"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/whitleah-asphalt.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/the-acupuncture-vet.html'">
-              <img src="assets/img/portfolio/the-acupuncture-vet/the-acupuncture-vet-1.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/the-acupuncture-vet/the-acupuncture-vet-1.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="The Acupuncture Vet"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/the-acupuncture-vet.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/onixit.html'">
-              <img src="assets/img/portfolio/onixit/onixit-test-site-min.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/onixit/onixit-test-site-min.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Onix IT"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/onixit.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/beyond-bourbon.html'">
-              <img src="assets/img/portfolio/beyond-bourbon/beyond-bourbon-min.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/beyond-bourbon/beyond-bourbon-min.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Beyond Bourbon"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/beyond-bourbon.html" title="More Details"><i
-                    class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item site-duplication">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/callery-building.html'">
-              <img src="assets/img/portfolio/callery-building/callery-building-min.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/callery-building/callery-building-min.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Callery Building"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/callery-building.html" title="More Details"><i
-                    class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item site-duplication">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/sol-communicate.html'">
-              <img src="assets/img/portfolio/sol-communicate/sol-communicate-min.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/sol-communicate/sol-communicate-min.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Sol Communicate"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/sol-communicate.html" title="More Details"><i
-                    class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development ecommerce-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/asiwo.html'">
-              <img src="assets/img/portfolio/asiwo/asiwo-min.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/asiwo/asiwo-min.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Asiwo"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/asiwo.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development ecommerce-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/fansjobs.html'">
-              <img src="assets/img/portfolio/fansjobs/fansjobs-min.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/fansjobs/fansjobs-min.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="FansJobs"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/fansjobs.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-development ecommerce-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/vexelmanagement.html'">
-              <img src="assets/img/portfolio/vexelmanagement/vexelmanagement-min.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/vexelmanagement/vexelmanagement-min.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Vexel Management"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/vexelmanagement.html" title="More Details"><i
-                    class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item site-duplication ecommerce-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/zephyr.html'">
-              <img src="assets/img/portfolio/zephyr/zephyr.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/zephyr/zephyr.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Zephyr"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/zephyr.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item custom-web-solution">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/maela.html'">
-              <img src="assets/img/portfolio/maela/maela-min.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/maela/maela-min.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Mind At Ease"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/maela.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item custom-web-solution">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/getmyster.html'">
-              <img src="assets/img/portfolio/getmyster/getmyster-min.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/getmyster/getmyster-min.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Get Myster"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/getmyster.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item custom-web-solution">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/malachi-makin.html'">
-              <img src="assets/img/portfolio/malichi-makin/malachi-makin-min.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/malichi-makin/malachi-makin-min.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Malachi Makin"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/malachi-makin.html" title="More Details"><i
-                    class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item website-maintenance-support ecommerce-development">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/sicchic.html'">
-              <img src="assets/img/portfolio/sicchic/sicchic-min.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/sicchic/sicchic-min.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Sicchic"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/sicchic.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-design site-duplication">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/shopee.html'">
-              <img src="assets/img/portfolio/shopee/shopee-min.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/shopee/shopee-min.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Shopee"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/shopee.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-design">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/wengdo.html'">
-              <img src="assets/img/portfolio/wengdo/wengdo-min.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/wengdo/wengdo-min.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Wengdo"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/wengdo.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-design">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/academy.html'">
-              <img src="assets/img/portfolio/academy/academy-min.webp" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/academy/academy-min.webp" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Academy"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/academy.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item web-design">
-            <div class="portfolio-wrap" onclick="location.href='https://jeffosico.github.io/jeffosico-dev/portfolio/jollibee.html'">
-              <img src="assets/img/portfolio/jollibee/jollibee-min.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/jollibee/jollibee-min.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Jollibee"><i class="bx bx-plus"></i></a>
-                <a href="/jeffosico-dev/portfolio/jollibee.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-
-
-        </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Below are the services I am currently proficient in and actively offering:</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-globe"></i></div>
-            <h4 class="title">Web Development</h4>
-            <p class="description">Designing, building, and maintaining websites and web applications to deliver
-              seamless online experiences with a focus on functionality, security, and user-friendliness.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-palette"></i></div>
-            <h4 class="title">Web Design</h4>
-            <p class="description">Creating visually appealing and user-centric website layouts, incorporating essential
-              elements like graphics, typography, and color schemes to enhance the overall user experience.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-cart3"></i></div>
-            <h4 class="title">E-commerce Development</h4>
-            <p class="description">Building online stores with shopping carts, payment gateways, and product management
-              systems, often using platforms like Shopify, Magento, WooCommerce, or custom solutions.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-database-gear"></i></div>
-            <h4 class="title">Content Management Systems (CMS)</h4>
-            <p class="description">Implementing CMS platforms like WordPress, Drupal, Joomla, or others, enabling users
-              to manage and update website content easily.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-tools"></i></div>
-            <h4 class="title">Website Maintenance and Support</h4>
-            <p class="description">Offering ongoing maintenance, updates, and technical support for websites and web
-              applications.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="bi bi-gear"></i></div>
-            <h4 class="title">Custom Web Solutions</h4>
-            <p class="description">Providing tailored web development solutions to meet specific business needs and
-              requirements.</p>
+            <p class="timeline-company">Digital Offsider, Perth, WA, Australia</p>
+            <span class="timeline-date">Jun 2023 - Apr 2025</span>
+            <ul class="timeline-list">
+              <li>Design, build, and maintain websites using various CMS platforms</li>
+              <li>Write, design, and edit web page content</li>
+              <li>Quality assurance testing and performance optimization</li>
+              <li>Recommend and implement site improvements</li>
+            </ul>
           </div>
         </div>
 
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Testimonials Section  
-    <section id="testimonials" class="testimonials section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div> End testimonial item  
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div> End testimonial item 
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div> End testimonial item
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div> End testimonial item
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div> End testimonial item
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section>
-     End Testimonials Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Feel free to contact me using any of the following methods:</p>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="email">
-                <i class="bi bi-envelope-at-fill"></i>
-                <h4>Email:</h4>
-                <p><a href="mailto:jeffclydemarkosico@gmail.com">jeffclydemarkosico@gmail.com</a></p>
-              </div>
-              <div class="address">
-                <i class="bi bi-telegram"></i>
-                <h4>Telegram:</h4>
-                <p><a href="https://t.me/jeffosico">t.me/jeffosico</a></p>
-              </div>
-              <div class="phone">
-                <i class="bi bi-whatsapp"></i>
-                <h4>WhatsApp:</h4>
-                <p>+63 970 094 1227</p>
-              </div>
-              <div class="text-center">
-                <img src="assets/img/about/Jeff_02_Headshot.jpg" class="img-fluid contact-img" alt="">
-              </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Front-End Web Developer</h3>
+              <span class="timeline-badge">Contractual</span>
             </div>
-
+            <p class="timeline-company">Elite Digital, England, United Kingdom</p>
+            <span class="timeline-date">May 2023 - Aug 2023</span>
+            <ul class="timeline-list">
+              <li>Developing websites using Theme.co's Cornerstone Builder</li>
+              <li>Adding custom features and functions to websites</li>
+              <li>Full website design overhauls</li>
+            </ul>
           </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form id="my-form" action="https://formspree.io/f/xqkvpkqg" method="POST" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <input type="hidden" name="ip-address" id="ip-address">
-                  <label for="name">Your Name</label>
-                  <input type="text" class="form-control" name="name" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div id="error-message" class="error-message"></div>
-                <div id="success-message" class="sent-message"></div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-
         </div>
 
-      </div>
-    </section><!-- End Contact Section -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Web Developer / Web Designer</h3>
+              <span class="timeline-badge">Full-Time</span>
+            </div>
+            <p class="timeline-company">Futura Digital, Shenzhen, China</p>
+            <span class="timeline-date">Feb 2023 - May 2023</span>
+            <ul class="timeline-list">
+              <li>Structure and design web pages</li>
+              <li>Develop e-commerce websites</li>
+              <li>Collaborate with project managers and team members</li>
+            </ul>
+          </div>
+        </div>
 
-  </main><!-- End #main -->
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Software / Script Developer</h3>
+              <span class="timeline-badge">Freelance</span>
+            </div>
+            <p class="timeline-company">Freelance, Butuan City, Philippines</p>
+            <span class="timeline-date">Sep 2022 - Apr 2023</span>
+            <ul class="timeline-list">
+              <li>Created automation scripts for social platforms</li>
+              <li>Built POS System using Django, Bootstrap, and jQuery</li>
+            </ul>
+          </div>
+        </div>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Full-Stack Web Developer</h3>
+              <span class="timeline-badge">Freelance</span>
+            </div>
+            <p class="timeline-company">Freelance, Butuan City, Philippines</p>
+            <span class="timeline-date">Mar 2020 - Jul 2022</span>
+            <ul class="timeline-list">
+              <li>Design, build, and maintain websites</li>
+              <li>Quality assurance testing and performance optimization</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item timeline-education">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>BS Information Technology</h3>
+              <span class="timeline-badge education">Education</span>
+            </div>
+            <p class="timeline-company">ACLC College of Butuan, Butuan City, PH</p>
+            <span class="timeline-date">2015 - 2020</span>
+            <p class="timeline-note">BSIT Programmer of the Year</p>
+          </div>
+        </div>
+
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </section>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <!-- Services Section -->
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Services</span>
+        <h2>What I <span class="gradient-text">Offer</span></h2>
+      </div>
+      <div class="services-grid" data-animate="fade-up" data-delay="100">
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Building fast, functional, and secure websites using modern tools and frameworks.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+          <h3>Web Design</h3>
+          <p>Creating visually appealing, user-centric layouts with strong typography and clean aesthetics.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <h3>E-commerce</h3>
+          <p>Online stores with Shopify, WooCommerce, payment gateways, and product management.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+          <h3>CMS Solutions</h3>
+          <p>WordPress, Drupal, and custom CMS implementations for easy content management.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-wrench"></i></div>
+          <h3>Maintenance</h3>
+          <p>Ongoing updates, security patches, performance optimization, and technical support.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>Custom Solutions</h3>
+          <p>Tailored web solutions, automation workflows, and integrations for specific business needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Template Main JS File -->
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Contact</span>
+        <h2>Let's <span class="gradient-text">Work Together</span></h2>
+        <p class="section-desc">Have a project in mind? Let's discuss how I can help bring your vision to life.</p>
+      </div>
+      <div class="contact-grid" data-animate="fade-up" data-delay="100">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:jeffclydemarkosico@gmail.com">jeffclydemarkosico@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fa-brands fa-telegram"></i></div>
+            <div>
+              <h4>Telegram</h4>
+              <a href="https://t.me/jeffosico" target="_blank">t.me/jeffosico</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <h4>WhatsApp</h4>
+              <span>+63 970 094 1227</span>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/jeff-clyde-mark-osico-969176265" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/jeffosico/" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.facebook.com/jeffosico" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xqkvpkqg" method="POST">
+          <input type="hidden" name="ip-address" id="ip-address">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <div id="form-status" class="form-status"></div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#" class="nav-logo">jeff<span>osico</span></a>
+        <p>&copy; 2025 Jeff Osico. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/jeff-clyde-mark-osico-969176265" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/jeffosico/" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.facebook.com/jeffosico" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/chaport.js"></script>
 </body>
-<script>
-  /* Add "https://api.ipify.org?format=json" statement
-               this will communicate with the ipify servers in
-               order to retrieve the IP address $.getJSON will
-               load JSON-encoded data from the server using a
-               GET HTTP request */
-                
-               $.getJSON("https://api.ipify.org?format=json", function(data) {
-         
-         // Setting text of element P with id gfg
-         $("#ip-address").val(data.ip);
-     })
-  var form = document.getElementById("my-form");
-  
-  async function handleSubmit(event) {
-    event.preventDefault();
-    var success_status = document.getElementById("success-message");
-    var error_status = document.getElementById("error-message");
-    var data = new FormData(event.target);
-    fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: {
-          'Accept': 'application/json'
-      }
-    }).then(response => {
-        success_status.innerHTML = "Email successfully sent, expected a response within 24 hours.";
-        success_status.style.display = "block"
-        setTimeout(()=> {
-          form.reset();
-          success_status.style.display = "none"
-        }
-        ,2000);
-    }).catch(error => {
-        success_status.innerHTML = "Email successfully sent, expected a response within 24 hours.";
-        success_status.style.display = "block"
-        setTimeout(()=> {
-          form.reset();
-          success_status.style.display = "none"
-        }
-        ,2000);
-    });
-  }
-  form.addEventListener("submit", handleSubmit)
-</script>
 </html>
