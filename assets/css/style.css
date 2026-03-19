@@ -599,6 +599,10 @@ img {
 /* ============================================================
    PROJECTS
    ============================================================ */
+.projects {
+  background: var(--bg-secondary);
+}
+
 .featured-projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -844,7 +848,7 @@ img {
    EXPERIENCE / TIMELINE
    ============================================================ */
 .experience {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
 }
 
 .timeline {
@@ -971,6 +975,10 @@ img {
 /* ============================================================
    SERVICES
    ============================================================ */
+.services {
+  background: var(--bg-secondary);
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1025,7 +1033,7 @@ img {
    CONTACT
    ============================================================ */
 .contact {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
 }
 
 .contact-grid {
@@ -1410,7 +1418,7 @@ img {
    AI-DRIVEN DEVELOPMENT PROCESS
    ============================================================ */
 .process {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
 }
 
 .process-timeline {
@@ -1720,15 +1728,16 @@ img {
   .nav-links.mobile-open {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 72px;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    bottom: 0;
+    height: calc(100vh - 72px);
     background: var(--bg-primary);
     padding: 32px 24px;
     gap: 4px;
     z-index: 999;
+    overflow-y: auto;
     animation: slideDown 0.3s ease;
   }
 
