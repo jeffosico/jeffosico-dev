@@ -399,18 +399,9 @@
             '</div>' +
           '</section>';
 
-        // Screenshots with device preview
-        var images = [];
-        if (project.screenshots && project.screenshots.length > 0) {
-          images = project.screenshots;
-        } else if (project.thumbnail) {
-          images = [project.thumbnail];
-        }
-
-        var imagesHTML = images.map(function (s) {
-          return '<img src="../' + s + '" alt="' + project.title + '" loading="lazy">';
-        }).join('');
-
+        // Device preview images
+        var hasDeviceImages = project.deviceImages && project.deviceImages.desktop;
+        var desktopImg = hasDeviceImages ? project.deviceImages.desktop : project.thumbnail;
         var siteUrl = project.liveUrl || project.title;
 
         var devicePreviewHTML =
@@ -428,16 +419,26 @@
                 '<span class="device-frame-dot"></span>' +
                 '<span class="device-frame-url">' + siteUrl + '</span>' +
               '</div>' +
-              '<div class="device-frame-body">' + imagesHTML + '</div>' +
+              '<div class="device-frame-body">' +
+                '<img src="../' + desktopImg + '" alt="' + project.title + ' - Desktop" loading="lazy">' +
+              '</div>' +
             '</div>' +
           '</div>';
+
+        // Additional screenshots (shown below device preview)
+        var extraScreenshotsHTML = '';
+        if (project.screenshots && project.screenshots.length > 0) {
+          extraScreenshotsHTML = project.screenshots.map(function (s) {
+            return '<img src="../' + s + '" alt="' + project.title + '" loading="lazy">';
+          }).join('');
+        }
 
         // Content section
         var contentHTML =
           '<section class="project-detail-content">' +
             '<div class="container">' +
               '<div class="project-detail-grid">' +
-                '<div class="project-screenshots">' + devicePreviewHTML + '</div>' +
+                '<div class="project-screenshots">' + devicePreviewHTML + extraScreenshotsHTML + '</div>' +
                 '<div class="project-sidebar">' +
                   '<div class="project-info-card">' +
                     '<h3>Project Info</h3>' +
@@ -472,12 +473,44 @@
         // Device preview tabs
         var deviceTabs = container.querySelectorAll('.device-tab');
         var deviceFrame = container.querySelector('.device-frame');
+        var deviceImg = deviceFrame.querySelector('.device-frame-body img');
+
+        // Build device image map
+        var deviceImageMap = {};
+        if (hasDeviceImages) {
+          deviceImageMap.desktop = '../' + project.deviceImages.desktop;
+          deviceImageMap.laptop = '../' + project.deviceImages.laptop;
+          deviceImageMap.tablet = '../' + project.deviceImages.tablet;
+          deviceImageMap.mobile = '../' + project.deviceImages.mobile;
+        } else {
+          var fallback = '../' + (project.thumbnail || '');
+          deviceImageMap.desktop = fallback;
+          deviceImageMap.laptop = fallback;
+          deviceImageMap.tablet = fallback;
+          deviceImageMap.mobile = fallback;
+        }
+
         deviceTabs.forEach(function (tab) {
           tab.addEventListener('click', function () {
             deviceTabs.forEach(function (t) { t.classList.remove('active'); });
             tab.classList.add('active');
             var device = tab.getAttribute('data-device');
             deviceFrame.setAttribute('data-device', device);
+            // Swap the image
+            var newSrc = deviceImageMap[device];
+            if (newSrc && deviceImg) {
+              deviceImg.classList.remove('loaded');
+              deviceImg.src = newSrc;
+              deviceImg.alt = project.title + ' - ' + device.charAt(0).toUpperCase() + device.slice(1);
+              if (deviceImg.complete) {
+                deviceImg.classList.add('loaded');
+              } else {
+                deviceImg.addEventListener('load', function onLoad() {
+                  deviceImg.classList.add('loaded');
+                  deviceImg.removeEventListener('load', onLoad);
+                });
+              }
+            }
           });
         });
   }
