@@ -113,10 +113,12 @@ window.PROJECTS = [
     "fullDescription": "This was a project for RTL Roofing where I collaborated on the layout and design, then brought it to life on WordPress using Elementor.",
     "category": "Web Development",
     "techStack": [
-      "Claude",
       "WordPress",
       "Elementor",
-      "CSS"
+      "CSS",
+      "JavaScript",
+      "GTM",
+      "GA4"
     ],
     "client": "",
     "date": "October 10, 2025",
@@ -193,7 +195,8 @@ window.PROJECTS = [
     "techStack": [
       "WordPress",
       "Elementor",
-      "CSS"
+      "CSS",
+      "JavaScript"
     ],
     "client": "",
     "date": "December 14, 2023",
@@ -247,7 +250,10 @@ window.PROJECTS = [
     "techStack": [
       "WordPress",
       "Elementor",
-      "CSS"
+      "CSS",
+      "JavaScript",
+      "GTM",
+      "GA4"
     ],
     "client": "",
     "date": "September 6, 2023",
@@ -369,7 +375,9 @@ window.PROJECTS = [
       "WordPress",
       "Elementor",
       "CSS",
-      "JavaScript"
+      "JavaScript",
+      "GTM",
+      "GA4"
     ],
     "client": "",
     "date": "June 5, 2025",
@@ -504,7 +512,9 @@ window.PROJECTS = [
     "techStack": [
       "WordPress",
       "Elementor",
-      "CSS"
+      "CSS",
+      "GTM",
+      "GA4"
     ],
     "client": "",
     "date": "September 18, 2023",
@@ -673,7 +683,9 @@ window.PROJECTS = [
       "WordPress",
       "Elementor",
       "CSS",
-      "JavaScript"
+      "JavaScript",
+      "GTM",
+      "GA4"
     ],
     "client": "Stormguard Roof Repairs",
     "date": "July 21, 2025",
@@ -701,7 +713,10 @@ window.PROJECTS = [
     "techStack": [
       "WordPress",
       "Elementor",
-      "Custom CSS"
+      "Custom CSS",
+      "JavaScript",
+      "GTM",
+      "GA4"
     ],
     "client": "",
     "date": "August 30, 2023",
