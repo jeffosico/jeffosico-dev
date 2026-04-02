@@ -49,6 +49,35 @@ window.PROJECTS = [
     "featured": false
   },
   {
+    "title": "Medical Innovative Solutions Beauty, Intimacy & Wellness",
+    "slug": "misbiw",
+    "shortDescription": "For this Gig, I was tasked by a colleague to handle a full website development for a client who is a medical practitioner helping other medical professionals build their own websites.  The client\u2019s existing site was built on Wix, but they wanted the new one developed on WordPress.",
+    "fullDescription": "For this Gig, I was tasked by a colleague to handle a full website development for a client who is a medical practitioner helping other medical professionals build their own websites. The client\u2019s existing site was built on Wix, but they wanted the new one developed on WordPress. Once the design files were provided, I had just one week to complete the entire build. I used Elementor as the primary page builder, applying extensive CSS customization due to the complex design and layout requirements. This was my first project that required a completely seamless background across the entire page\u2014a challenging task, but one I successfully executed. Migrating from Wix to the client\u2019s server proved to be a hurdle, as Wix is not particularly open or flexible with domain transfers. It took some time to troubleshoot and resolve this issue, but I managed to complete the migration smoothly. In the end, the client was very satisfied with the final product, we delivered on time, and I continue to maintain and update the site to this day.",
+    "category": "Web Development",
+    "techStack": [
+      "WordPress",
+      "Elementor",
+      "CSS",
+      "JavaScript"
+    ],
+    "client": "",
+    "date": "June 12, 2025",
+    "projectType": "Gig",
+    "liveUrl": "https://misbiw.com/",
+    "thumbnail": "assets/img/portfolio/misbiw/misbiw.webp",
+    "deviceImages": {
+      "desktop": "assets/img/portfolio/misbiw/misbiw-desktop.webp",
+      "laptop": "assets/img/portfolio/misbiw/misbiw-laptop.webp",
+      "tablet": "assets/img/portfolio/misbiw/misbiw-tablet.webp",
+      "mobile": "assets/img/portfolio/misbiw/misbiw-mobile.webp"
+    },
+    "screenshots": [],
+    "categories": [
+      "web-development"
+    ],
+    "featured": true
+  },
+  {
     "title": "Asiwo",
     "slug": "asiwo",
     "shortDescription": "Asiwo is an exceptional e-commerce platform specializing in the sale of underwater scooters.  I had the privilege of working on this project as part of my tenure at Futura Digital, and it stands as one of my most significant achievements in web development.",
@@ -407,35 +436,6 @@ window.PROJECTS = [
       "custom-web-solution"
     ],
     "featured": false
-  },
-  {
-    "title": "Medical Innovative Solutions Beauty, Intimacy & Wellness",
-    "slug": "misbiw",
-    "shortDescription": "For this Gig, I was tasked by a colleague to handle a full website development for a client who is a medical practitioner helping other medical professionals build their own websites.  The client\u2019s existing site was built on Wix, but they wanted the new one developed on WordPress.",
-    "fullDescription": "For this Gig, I was tasked by a colleague to handle a full website development for a client who is a medical practitioner helping other medical professionals build their own websites. The client\u2019s existing site was built on Wix, but they wanted the new one developed on WordPress. Once the design files were provided, I had just one week to complete the entire build. I used Elementor as the primary page builder, applying extensive CSS customization due to the complex design and layout requirements. This was my first project that required a completely seamless background across the entire page\u2014a challenging task, but one I successfully executed. Migrating from Wix to the client\u2019s server proved to be a hurdle, as Wix is not particularly open or flexible with domain transfers. It took some time to troubleshoot and resolve this issue, but I managed to complete the migration smoothly. In the end, the client was very satisfied with the final product, we delivered on time, and I continue to maintain and update the site to this day.",
-    "category": "Web Development",
-    "techStack": [
-      "WordPress",
-      "Elementor",
-      "CSS",
-      "JavaScript"
-    ],
-    "client": "",
-    "date": "June 12, 2025",
-    "projectType": "Gig",
-    "liveUrl": "https://misbiw.com/",
-    "thumbnail": "assets/img/portfolio/misbiw/misbiw.webp",
-    "deviceImages": {
-      "desktop": "assets/img/portfolio/misbiw/misbiw-desktop.webp",
-      "laptop": "assets/img/portfolio/misbiw/misbiw-laptop.webp",
-      "tablet": "assets/img/portfolio/misbiw/misbiw-tablet.webp",
-      "mobile": "assets/img/portfolio/misbiw/misbiw-mobile.webp"
-    },
-    "screenshots": [],
-    "categories": [
-      "web-development"
-    ],
-    "featured": true
   },
   {
     "title": "Novus North Side",
