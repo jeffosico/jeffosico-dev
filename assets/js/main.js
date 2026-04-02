@@ -214,7 +214,7 @@
 
     allProjects = projects;
     var sortSelect = document.getElementById('sort-select');
-    var sortBy = sortSelect ? sortSelect.value : 'name-asc';
+    var sortBy = sortSelect ? sortSelect.value : 'date-newest';
     var sorted = sortProjects(projects, sortBy);
 
     // Get existing cards and sort them in the DOM (no re-render needed)

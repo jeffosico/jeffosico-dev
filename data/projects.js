@@ -49,7 +49,36 @@ window.PROJECTS = [
     "featured": false
   },
   {
-    "title": "Medical Innovative Solutions Beauty, Intimacy & Wellness",
+    "title": "Nexus Locksmiths",
+    "slug": "nexus-locksmiths",
+    "shortDescription": "Developed a fast, conversion-focused WordPress website for Nexus Locksmiths using Elementor, with the design fully generated through Claude.",
+    "fullDescription": "For this project, I handled the full website development for Nexus Locksmiths, a professional locksmith service aiming to build a strong online presence. The goal was to create a clean, conversion-focused site that clearly showcases their services and makes it easy for customers to get in touch.<br><br>The design was built purely using Claude, which helped shape the layout, structure, and overall visual direction of the site. I then developed it on WordPress using Elementor, with additional custom CSS to refine the design.<br><br>The final result is a fast, responsive, and user-friendly website that effectively represents the brand and drives customer inquiries.",
+    "category": "Web Development",
+    "techStack": [
+      "Claude",
+      "WordPress",
+      "Elementor",
+      "CSS"
+    ],
+    "client": "",
+    "date": "March 20, 2026",
+    "projectType": "Gig",
+    "liveUrl": "https://nexuslocksmiths.com/",
+    "thumbnail": "assets/img/portfolio/nexus-locksmiths/nexus-locksmiths.webp",
+    "deviceImages": {
+      "desktop": "assets/img/portfolio/nexus-locksmiths/nexus-locksmiths-desktop.webp",
+      "laptop": "assets/img/portfolio/nexus-locksmiths/nexus-locksmiths-laptop.webp",
+      "tablet": "assets/img/portfolio/nexus-locksmiths/nexus-locksmiths-tablet.webp",
+      "mobile": "assets/img/portfolio/nexus-locksmiths/nexus-locksmiths-mobile.webp"
+    },
+    "screenshots": [],
+    "categories": [
+      "web-development"
+    ],
+    "featured": true
+  },
+  {
+    "title": "Medical Innovative Solutions Beauty, Intimacy & Wellness (MISBIW)",
     "slug": "misbiw",
     "shortDescription": "For this Gig, I was tasked by a colleague to handle a full website development for a client who is a medical practitioner helping other medical professionals build their own websites.  The client\u2019s existing site was built on Wix, but they wanted the new one developed on WordPress.",
     "fullDescription": "For this Gig, I was tasked by a colleague to handle a full website development for a client who is a medical practitioner helping other medical professionals build their own websites. The client\u2019s existing site was built on Wix, but they wanted the new one developed on WordPress. Once the design files were provided, I had just one week to complete the entire build. I used Elementor as the primary page builder, applying extensive CSS customization due to the complex design and layout requirements. This was my first project that required a completely seamless background across the entire page\u2014a challenging task, but one I successfully executed. Migrating from Wix to the client\u2019s server proved to be a hurdle, as Wix is not particularly open or flexible with domain transfers. It took some time to troubleshoot and resolve this issue, but I managed to complete the migration smoothly. In the end, the client was very satisfied with the final product, we delivered on time, and I continue to maintain and update the site to this day.",
@@ -71,6 +100,57 @@ window.PROJECTS = [
       "tablet": "assets/img/portfolio/misbiw/misbiw-tablet.webp",
       "mobile": "assets/img/portfolio/misbiw/misbiw-mobile.webp"
     },
+    "screenshots": [],
+    "categories": [
+      "web-development"
+    ],
+    "featured": true
+  },
+  {
+    "title": "RTL Roofing",
+    "slug": "rtl-roofing",
+    "shortDescription": "This was a project for RTL Roofing where I collaborated on the layout and design, then brought it to life on WordPress using Elementor.",
+    "fullDescription": "This was a project for RTL Roofing where I collaborated on the layout and design, then brought it to life on WordPress using Elementor.",
+    "category": "Web Development",
+    "techStack": [
+      "Claude",
+      "WordPress",
+      "Elementor",
+      "CSS"
+    ],
+    "client": "",
+    "date": "October 10, 2025",
+    "projectType": "Gig",
+    "liveUrl": "https://rtl-roofing.com.au/",
+    "thumbnail": "assets/img/portfolio/rtl-roofing/rtl-roofing.webp",
+    "deviceImages": {
+      "desktop": "assets/img/portfolio/rtl-roofing/rtl-roofing-desktop.webp",
+      "laptop": "assets/img/portfolio/rtl-roofing/rtl-roofing-laptop.webp",
+      "tablet": "assets/img/portfolio/rtl-roofing/rtl-roofing-tablet.webp",
+      "mobile": "assets/img/portfolio/rtl-roofing/rtl-roofing-mobile.webp"
+    },
+    "screenshots": [],
+    "categories": [
+      "web-development"
+    ],
+    "featured": true
+  },
+  {
+    "title": "Creative8Collab",
+    "slug": "creative8collab",
+    "shortDescription": "This is a project for one of my workmate who ask me to develop a landing page for their website using Elementor.",
+    "fullDescription": "This is a project for one of my workmate who ask me to develop a landing page for their website using Elementor.",
+    "category": "Web Development",
+    "techStack": [
+      "WordPress",
+      "Elementor",
+      "CSS"
+    ],
+    "client": "",
+    "date": "December 1, 2024",
+    "projectType": "Gig",
+    "liveUrl": "https://creative8collab.com/",
+    "thumbnail": "assets/img/portfolio/creative8collab/creative8collab-1.webp",
     "screenshots": [],
     "categories": [
       "web-development"
@@ -246,28 +326,6 @@ window.PROJECTS = [
       "web-development"
     ],
     "featured": false
-  },
-  {
-    "title": "Creative8Collab",
-    "slug": "creative8collab",
-    "shortDescription": "This is a project for one of my workmate who ask me to develop a landing page for their website using Elementor.",
-    "fullDescription": "This is a project for one of my workmate who ask me to develop a landing page for their website using Elementor.",
-    "category": "Web Development",
-    "techStack": [
-      "WordPress",
-      "Elementor",
-      "CSS"
-    ],
-    "client": "",
-    "date": "December 1, 2024",
-    "projectType": "Gig",
-    "liveUrl": "https://creative8collab.com/",
-    "thumbnail": "assets/img/portfolio/creative8collab/creative8collab-1.webp",
-    "screenshots": [],
-    "categories": [
-      "web-development"
-    ],
-    "featured": true
   },
   {
     "title": "FansJobs",
