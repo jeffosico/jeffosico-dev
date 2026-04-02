@@ -121,7 +121,7 @@ window.PROJECTS = [
     "client": "",
     "date": "October 10, 2025",
     "projectType": "Gig",
-    "liveUrl": "https://rtl-roofing.com.au/",
+    "liveUrl": "https://rtlroofing.com.au/",
     "thumbnail": "assets/img/portfolio/rtl-roofing/rtl-roofing.webp",
     "deviceImages": {
       "desktop": "assets/img/portfolio/rtl-roofing/rtl-roofing-desktop.webp",
