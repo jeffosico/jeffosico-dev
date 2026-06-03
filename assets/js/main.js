@@ -448,7 +448,9 @@
                       '<li><strong>Client</strong><span>' + (project.client || 'N/A') + '</span></li>' +
                       '<li><strong>Date</strong><span>' + project.date + '</span></li>' +
                       '<li><strong>Type</strong><span>' + project.projectType + '</span></li>' +
-                      (project.liveUrl ? '<li><strong>URL</strong><a href="' + project.liveUrl + '" target="_blank">' + project.liveUrl + '</a></li>' : '') +
+                      '<li><strong>Status</strong><span>' + (project.status || 'N/A') + '</span></li>' +
+                      (project.liveUrl ? '<li><strong>URL</strong><a href="' + project.liveUrl + '" target="_blank" class="' + (project.status === 'inactive' ? 'inactive-url' : '') + '">' + project.liveUrl + '</a></li>' : '') +
+                      (project.status === 'inactive' && project.stagingUrl ? '<li><strong>Staging URL</strong><a href="' + project.stagingUrl + '" target="_blank">' + project.stagingUrl + '</a></li>' : '') +
                     '</ul>' +
                     (project.liveUrl ? '<a href="' + project.liveUrl + '" target="_blank" class="btn btn-primary btn-full" style="margin-top:16px"><span>Visit Site</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>' : '') +
                   '</div>' +

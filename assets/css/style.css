@@ -1396,6 +1396,12 @@ img {
   word-break: break-all;
 }
 
+.project-info-list li a.inactive-url {
+  color: #e74c3c;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
 .project-description-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
