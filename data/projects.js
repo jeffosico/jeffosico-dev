@@ -137,7 +137,7 @@ window.PROJECTS = [
     },
     "screenshots": [],
     "categories": ["web-development"],
-    "featured": true
+    "featured": false
   },
   {
     "title": "Allways Roofing",
@@ -207,7 +207,7 @@ window.PROJECTS = [
     },
     "screenshots": [],
     "categories": ["web-development"],
-    "featured": true
+    "featured": false
   },
   {
     "title": "Alfie's Roofing",
@@ -371,7 +371,7 @@ window.PROJECTS = [
     },
     "screenshots": [],
     "categories": ["web-development"],
-    "featured": true
+    "featured": false
   },
   {
     "title": "Academy",
@@ -543,7 +543,7 @@ window.PROJECTS = [
     "categories": [
       "web-development"
     ],
-    "featured": true
+    "featured": false
   },
   {
     "title": "Asiwo",
@@ -572,7 +572,7 @@ window.PROJECTS = [
       "web-development",
       "ecommerce-development"
     ],
-    "featured": true
+    "featured": false
   },
   {
     "title": "Attention Detailing",
@@ -597,7 +597,7 @@ window.PROJECTS = [
     "categories": [
       "web-development"
     ],
-    "featured": true
+    "featured": false
   },
   {
     "title": "Beyond Bourbon",
@@ -796,7 +796,7 @@ window.PROJECTS = [
     "categories": [
       "web-development"
     ],
-    "featured": true
+    "featured": false
   },
   {
     "title": "Get Myster",
@@ -944,7 +944,7 @@ window.PROJECTS = [
     "categories": [
       "web-development"
     ],
-    "featured": true
+    "featured": false
   },
   {
     "title": "Onix IT",
