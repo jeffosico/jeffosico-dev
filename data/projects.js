@@ -311,7 +311,7 @@ window.PROJECTS = [
     "fullDescription": "I built this landing page for Stormguard Roof Repairs, a roof repair business that needed a focused page to promote its services and generate leads. The page was structured to clearly explain the business’s roofing repair services, create trust, and make it easy for users to contact the team.<br><br>The project was developed in WordPress using Elementor, with custom CSS and JavaScript added to refine the design, layout, and responsive experience.<br><br>The final result is a clean, mobile-friendly, and conversion-focused landing page that supports the client’s online presence and inquiry generation.",
     "category": "Web Development",
     "techStack": ["WordPress", "Elementor", "CSS", "JavaScript"],
-    "client": "",
+    "client": "Stormguard Roof Repairs",
     "date": "July 10, 2025",
     "projectType": "Gig",
     "liveUrl": "https://stormguardroofrepairs.com.au/",
@@ -1092,39 +1092,6 @@ window.PROJECTS = [
     ],
     "categories": [
       "site-duplication"
-    ],
-    "featured": false
-  },
-  {
-    "title": "Storm Guard Roof Repairs",
-    "slug": "stormguardroofrepairs",
-    "status": "active",
-    "shortDescription": "This was a project for a roofing company where I collaborated with a web designer on the layout and design, then brought it to life using Elementor.",
-    "fullDescription": "This was a project for a roofing company where I collaborated with a web designer on the layout and design, then brought it to life using Elementor.",
-    "category": "Web Development",
-    "techStack": [
-      "WordPress",
-      "Elementor",
-      "CSS",
-      "JavaScript",
-      "GTM",
-      "GA4"
-    ],
-    "client": "Stormguard Roof Repairs",
-    "date": "July 21, 2025",
-    "projectType": "Gig",
-    "liveUrl": "https://stormguardroofrepairs.com.au/",
-    "stagingUrl": "",
-    "thumbnail": "assets/img/portfolio/stormguardroofrepairs/stormguardroofrepairs.webp",
-    "deviceImages": {
-      "desktop": "assets/img/portfolio/stormguardroofrepairs/stormguardroofrepairs-desktop.webp",
-      "laptop": "assets/img/portfolio/stormguardroofrepairs/stormguardroofrepairs-laptop.webp",
-      "tablet": "assets/img/portfolio/stormguardroofrepairs/stormguardroofrepairs-tablet.webp",
-      "mobile": "assets/img/portfolio/stormguardroofrepairs/stormguardroofrepairs-mobile.webp"
-    },
-    "screenshots": [],
-    "categories": [
-      "web-development"
     ],
     "featured": false
   },
