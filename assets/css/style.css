@@ -603,6 +603,28 @@ img {
   background: var(--bg-secondary);
 }
 
+.projects-disclaimer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--bg-tertiary);
+  border-left: 3px solid var(--primary-color);
+  border-radius: 4px;
+  margin-bottom: 32px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.projects-disclaimer i {
+  flex-shrink: 0;
+  color: var(--primary-color);
+}
+
+.projects-disclaimer p {
+  margin: 0;
+}
+
 .featured-projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1811,6 +1833,13 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .projects-disclaimer {
+    align-items: flex-start;
+  }
+
+  .projects-disclaimer i {
+    margin-top: 4px;
+  }
   .services-grid {
     grid-template-columns: 1fr;
   }
