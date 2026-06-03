@@ -670,7 +670,7 @@ window.PROJECTS = [
     "title": "Callery Building",
     "slug": "callery-building",
     "status": "active",
-    "shortDescription": "Callery Building (https://www. callerybuilding."
+    "shortDescription": "Callery Building (https://www. callerybuilding.",
     "fullDescription": "Callery Building (https://www.callerybuilding.com.au/) is also a site that I duplicated using the Cornerstone page builder and the Pro theme. Leveraging the flexibility of WordPress and the powerful tools of Cornerstone, I replicated every detail of the Callery Building site, delivering a seamless user experience.",
     "category": "Site Duplication",
     "techStack": [
@@ -856,7 +856,7 @@ window.PROJECTS = [
     "title": "Mind At Ease",
     "slug": "maela",
     "status": "active",
-    "shortDescription": "MAE (Mind At Ease) is an e-commerce site that offers a curated selection of premium products designed to enhance your smoking experience.  As one of the initial projects I managed as a web developer, mae."
+    "shortDescription": "MAE (Mind At Ease) is an e-commerce site that offers a curated selection of premium products designed to enhance your smoking experience.  As one of the initial projects I managed as a web developer, mae.",
     "fullDescription": "MAE (Mind At Ease) is an e-commerce site that offers a curated selection of premium products designed to enhance your smoking experience. As one of the initial projects I managed as a web developer, mae.la holds a special place in my professional journey.Through custom coding, I meticulously enhanced various sections of the website, including the single product page, ensuring a seamless and captivating shopping experience for our esteemed customers. Additionally, I diligently addressed and resolved any errors and bugs that may have surfaced, guaranteeing a flawless user interface.",
     "category": "Custom Web Solution",
     "techStack": [
@@ -887,7 +887,7 @@ window.PROJECTS = [
     "title": "Malachi Makin",
     "slug": "malachi-makin",
     "status": "active",
-    "shortDescription": "Malachimakin. com is a dedicated personal website showcasing the diverse endeavors of an Evangelist/Entrepreneur who shares the same name."
+    "shortDescription": "Malachimakin. com is a dedicated personal website showcasing the diverse endeavors of an Evangelist/Entrepreneur who shares the same name.",
     "fullDescription": "Malachimakin.com is a dedicated personal website showcasing the diverse endeavors of an Evangelist/Entrepreneur who shares the same name. The site serves as a comprehensive platform, featuring the individual's projects, partnerships, captivating YouTube content, insightful blogs, and contact information for easy communication. As one of my initial web development projects, I constructed this website several years ago.It holds sentimental value as it marks the beginnings of my career in web development. Built on the WordPress platform, I utilized a specific theme to create a cohesive and visually appealing design. While I didn't employ any custom page builders, I maximized the theme's premade pages and sections, in conjunction with WordPress' default block editor. To further enhance the site's functionality, I incorporated elements of HTML and CSS.",
     "category": "Custom Web Solution",
     "techStack": [
@@ -1070,7 +1070,7 @@ window.PROJECTS = [
     "title": "Sol Communicate",
     "slug": "sol-communicate",
     "status": "active",
-    "shortDescription": "Sol Communicate landing page duplication (https://www. solcommunicate."
+    "shortDescription": "Sol Communicate landing page duplication (https://www. solcommunicate.",
     "fullDescription": "Sol Communicate landing page duplication (https://www.solcommunicate.au/), I showcased my expertise in website development and design. This project involved duplicating a website using the Cornerstone page builder and Pro theme. Using Cornerstone's flexibility and the Pro theme's customization options, I recreated the original site with precision and added a touch of uniqueness. The result is a seamless, responsive design that adapts flawlessly to different devices.",
     "category": "Site Duplication",
     "techStack": [
